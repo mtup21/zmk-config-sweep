@@ -46,7 +46,7 @@
         code_block: code_block {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&none &kp RBKT &kp C &kp O &kp D &kp E &kp RBRC &kp RET &kp RET &kp RBKT &kp C &kp O &kp D &kp E &kp RBRC &kp RBKT &kp C &kp O &kp D &kp E &kp RBRC &kp RET &kp RET &kp RBKT &kp C &kp O &kp D &kp E &kp RBRC &kp UP_ARROW>;
+            bindings = <&none &kp LEFT_BRACE &kp C &kp O &kp D &kp E &kp RBRC &kp RET &kp RET &kp LEFT_BRACE &kp C &kp O &kp D &kp E &kp RBRC &kp UP_ARROW>;
             label = "CODE_BLOCK";
         };
 
@@ -141,10 +141,10 @@
 
         layer_3 {
             bindings = <
-&bt BT_CLR    &trans  &trans  &trans  &bt BT_CLR_ALL    &trans  &trans  &trans  &trans  &trans
-&trans        &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans  &trans
-&bt BT_SEL 0  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans  &trans
-                              &trans  &trans            &trans  &trans
+&bt BT_CLR    &trans    &kp UP_ARROW    &trans           &bt BT_CLR_ALL    &trans  &trans  &trans  &trans  &trans
+&trans        &kp LEFT  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans            &trans  &trans  &trans  &trans  &trans
+&bt BT_SEL 0  &trans    &trans          &trans           &trans            &trans  &trans  &trans  &trans  &trans
+                                        &trans           &trans            &trans  &trans
             >;
         };
     };
