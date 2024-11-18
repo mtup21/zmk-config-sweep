@@ -63,6 +63,20 @@
             bindings = <&none &kp P &kp A &kp T &kp T &kp E &kp R &kp N &kp EQUAL>;
             label = "PATTERN";
         };
+
+        copy: copy {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LG(C)>;
+            label = "COPY";
+        };
+
+        paste: paste {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LG(V)>;
+            label = "PASTE";
+        };
     };
 
     combos {
@@ -131,6 +145,16 @@
         volume_down {
             bindings = <&kp C_VOLUME_DOWN>;
             key-positions = <13 14>;
+        };
+
+        copy {
+            bindings = <&copy>;
+            key-positions = <10 11>;
+        };
+
+        paste {
+            bindings = <&paste>;
+            key-positions = <20 21>;
         };
     };
 
